@@ -2,7 +2,7 @@ import java.util.Locale;
 
 public class Vector2D {
 
-    static double count;
+    static int count;
 
     public double Vx, Vy;
 
@@ -47,8 +47,9 @@ public class Vector2D {
     }
 
     public void normalized(){
-        this.Vx = Vx / length();
-        this.Vy = Vy / length();
+        double temp = length();
+        this.Vx = Vx / temp;
+        this.Vy = Vy / temp;
     }
 
     public double dotProduct(Vector2D v){
